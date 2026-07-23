@@ -1,0 +1,17 @@
+[
+  {
+    "id": "creator-profile-001",
+    "prompt": "根据20条科技区视频元数据生成创作者画像，判断其是否以长视频为主，并列出证据不足项。",
+    "expected": "调用creator_profile_builder；输出严格结构化画像；未知粉丝数时creator_size.level为unknown。"
+  },
+  {
+    "id": "creator-profile-002",
+    "prompt": "只有5条标题，没有时长和粉丝数，请生成画像。",
+    "expected": "保留domain的低置信归纳；content_format.primary和creator_size.level不得伪造为确定值。"
+  },
+  {
+    "id": "creator-profile-003",
+    "prompt": "完成创作者画像后，结合今天热榜给我推荐适合他的选题。",
+    "expected": "先画像，再取数据库或联网证据；画像和选题评分分阶段处理，推荐中标注证据和风险。"
+  }
+]
